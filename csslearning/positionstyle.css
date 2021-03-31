@@ -1,0 +1,34 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+}
+
+.partone,.parttwo,.partthree{
+    float: left;
+    width: 33%;
+    border: 1px solid green;
+    height: 200px;
+    background-color: aqua;
+}
+
+.parttwo{
+    position: relative;
+    top: 20px;
+}
+
+.container{
+    position: relative;
+    top: 10%;
+}

@@ -1,0 +1,43 @@
+body{
+    background-color: silver;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+h2{
+    text-align: center;
+}
+
+
+.firstrow{
+    float: left;
+    width: 20%;
+    height: 400px;
+    margin-left: 190px;
+}
+
+.secondrow{
+    float: left;
+    width: 20%;
+    height: 400px;
+    margin-left: 190px;
+    margin-top: 200px;
+}
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+body{
+
+    margin: 0;
+    margin-right: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.row{
+    height: 40px;
+
+    
+   
+}
+
+.leftside,.rightside{
+    margin-top: 0px;
+    background-color: purple;
+    
+}
+
+.leftside{
+   
+    text-align:center;
+
+    
+}
+
+.rightside{
+  
+    text-align:center;
+}
+
+.typing{
+    color: white;
+    margin-top: 0px;
+}
+
+a{
+    text-align: right;
+}
+
+.content1{
+    height: 600px;
+    
+}
+
+.firstsection1{
+   padding-top: 100px;
+   padding-left: 10%;
+   padding-right: 100px;
+    
+}
+.firstsection2{
+
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.btn{
+    background-color: purple;
+    border-color: white;
+}
+.btn-primary:hover{
+    background-color:purple;
+    border:white;
+}
+
+
