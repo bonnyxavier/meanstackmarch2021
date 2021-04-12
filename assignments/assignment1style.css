@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.phone{
+    padding-top: 70px;
+    height: 650px;
+    float: right;
+    margin: 10px;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+
+.right-column{
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    width: 350px;
+    margin: 10px;
+    padding: 40px;
+    padding-top: 20px;
+}
+
+.instagramlogo{
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.or{
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn{
+    margin: 12px auto;
+    padding: 2px!important;
+    width: 100%;
+}
+
+.facebook-link{
+    text-align: center;
+    font-size: 16px;
+}
+
+.forgot-password-link{
+    text-align: center;
+    font-size: 12px;
+}
+
+.right-column-signup{
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        width: 350px;
+        margin: 10px;
+        padding: 15px;
+
+    
+}
+
+.right-side{
+    padding-top: 70px;
+}
+
+.info1{
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.apps{
+    width: 350px;
+    margin: 10px;
+    padding: 15px;
+    float: left;
+}
+
+.apple{
+    float: left;
+    
+}
+
+.android{
+    float: left;
+}
+.info2{
+    text-align: center;
+    font-size: 13px;
+}
