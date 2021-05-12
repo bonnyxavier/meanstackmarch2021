@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fetch</h1>
+
+    <button onclick="populate()">Fetch</button>
+
+
+    <div id="result"></div>
+</body>
+
+
+<script>
+    function populate(todos){
+html_value=``;
+for(let todo in todos){
+
+    html_value+=`user:${todo.id},title: ${todo.title}, status:${todo.completed}` 
+    }    
+    document.querySelector("#result").innerHTML=html_value;   
+}
+
+
+function fetchTodos(){
+    fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(res=>{
+        if(! res.ok){
+            throw new Error("Failed to fetch data")
+        }
+        else{
+            return res.json()
+        }
+    }).then(data=>populate(data)).catch(err=>alert(err))
+}
+</script>
+</html>

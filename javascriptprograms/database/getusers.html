@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Fetch Users</h1>
+
+    <button onclick="displayDetails()">Fetch Users</button>
+
+    <div id="resultarea"></div>
+
+</body>
+
+<script>
+
+
+
+
+    var request = new XMLHttpRequest();
+
+    request.open("get", "https://jsonplaceholder.typicode.com/users")
+
+    request.send()
+
+    request.onreadystatechange = () => {
+        if (request.readyState == 4) {
+            if (request.status > 199 & request.status < 300) {
+                console.log(request.responseText)
+            }
+            else {
+                alert("failed")
+            }
+        }
+    }
+
+
+    function displayDetails() {
+
+        html_val = `${JSON.parse(request.responseText)}`
+
+        document.querySelector("#resultarea").innerHTML = html_val
+
+    }
+
+</script>
+
+</html>

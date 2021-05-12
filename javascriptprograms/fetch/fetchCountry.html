@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="country" placeholder="Enter Country Name">
+    <button onclick="fetchCountryData()">Fetch Country Data</button>
+
+    <div id="result">
+
+
+
+    </div>
+
+    <!-- flag
+        population
+        currency -->
+</body>
+
+<script>
+
+    function fetchCountryData() {
+        let countryname = country.value;
+
+        fetch(`https://restcountries.eu/rest/v2/name/${countryname}?fullText=true`)
+            .then(response => response.json())
+            .then(data => populate(data))
+    }
+
+    function populate(countrydata) {
+        
+        for (let country of countrydata) {
+            html_val =
+                `
+                     <div><img src="${country.flag}" alt=""></div>\
+                     <div>Population is ${country.population}</div>
+                     <div>Currency is ${JSON.stringify(country.currencies)}</div>
+
+                 `
+        }
+
+
+        document.querySelector("#result").innerHTML = html_val;
+    }
+
+
+
+
+</script>
+
+
+
+
+</html>

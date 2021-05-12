@@ -1,0 +1,34 @@
+.display{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(153, 153, 182);
+}
+
+.container{
+    background-color: blue;
+    width: 300px;
+    height: 320px;
+    padding: 20px;
+}
+
+table{
+    text-align:center;
+    width: 296px;
+    height: 325px;
+}
+
+.btn{
+height: 40px;
+width: 40px;
+background-color: coral;
+}
+
+.operator{
+height: 40px;
+width: 40px;
+background-color: rgb(60, 206, 15);
+}
+
+
+
+  

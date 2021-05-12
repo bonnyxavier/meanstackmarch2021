@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Todos With User ID = 1</h1>
+    <button onclick="fetchTodos()">FetchTodos</button>
+    <div id="result"></div>
+</body>
+
+<script>
+
+
+function populate(todos){
+
+let html_val = ``;
+for(let todo of todos){
+    html_val+=`<p>todoID:${todo.id} title:${todo.title} status:${todo.completed}</p>`
+}
+
+document.querySelector("#result").innerHTML=html_val
+
+}
+
+// function fetchTodos(){
+//     var request = new XMLHttpRequest;
+//     request.open("get","https://jsonplaceholder.typicode.com/todos")
+//     request.send()
+//     request.onreadystatechange=()=>{
+//         if(request.readyState==4){
+//             if(request.status>199 & request.status<300){
+//                 let todos = JSON.parse(request.responseText)
+//                 let filterTodo = todos.filter(todo=>todo.userId==1)
+//                 console.log(filterTodo)
+//                 populate(filterTodo)
+//             }
+//         }
+//     }
+// }
+
+
+function fetchTodos(){
+    fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(res=>res.json())
+    .then(data=>{
+        let filterTodos = data.filter(todo=>todo.userId==1)
+        populate(filterTodos)
+    })
+}
+
+
+
+
+</script>
+
+</html>
